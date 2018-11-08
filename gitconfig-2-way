@@ -1,0 +1,17 @@
+[user]
+	name = ballack
+	email = ballack.hu@qq.com
+[diff]
+	tool = bc3
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+    m = mergetool
+[difftool "bc3"]
+    cmd = /usr/bin/bcompare "$LOCAL" "$REMOTE"
+[merge]
+	tool = bc3
+[mergetool "bc3"]
+    cmd = /usr/bin/bcompare "$LOCAL" "$REMOTE" "-savetarget=$MERGED"
+	trustexitcode = true
