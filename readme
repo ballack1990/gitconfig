@@ -1,0 +1,9 @@
+git  config  --global   diff.tool bc3
+git  config  --global   difftool.prompt false
+git  config  --global   difftool.bc3.cmd '/usr/bin/bcompare "$LOCAL" "$REMOTE"'
+git  config  --global   merge.tool bc3
+git  config  --global   mergetool.prompt false
+git  config  --global   mergetool.bc3.cmd '/usr/bin/bcompare "$LOCAL" "$REMOTE" "-savetarget=$MERGED"'
+git  config  --global   mergetool.bc3.trustexitcode true
+git  config  --global   alias.d  difftool
+git  config  --global   alias.m  mergetool
